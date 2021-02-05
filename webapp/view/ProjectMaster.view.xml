@@ -1,0 +1,69 @@
+<mvc:View controllerName="zarattzAratt_SD.controller.ProjectMaster" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:tnt="sap.tnt" xmlns:mvc="sap.ui.core.mvc"
+	displayBlock="true" xmlns="sap.m" xmlns:form="sap.ui.layout.form" xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:unified="sap.ui.unified">
+	
+		
+	
+	<tnt:ToolPage sideExpanded="true" id="tool">
+        <tnt:header>
+            <tnt:ToolHeader height="50px" width="auto" design="Transparent" visible="true" enabled="true">
+                <tnt:content>
+                    <Button text="" type="Default" icon="sap-icon://menu2" iconFirst="true" width="auto" enabled="true" visible="true" tooltip="Toggle Side Navigation" press="_onToggleButtonPress"/>
+                    <ToolbarSpacer width="20px"/>
+                    <Button text="Save" type="Transparent" icon="sap-icon://save" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false" press="_onButtonPress"/>
+                    <Button text="Edit" type="Transparent" icon="sap-icon://edit" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <ToolbarSpacer width=""/>
+                    <ToolbarSpacer width=""/>
+                    <Button text="" type="Emphasized" icon="sap-icon://video" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                    <Button text="www.aratt.in/" type="Transparent" iconFirst="true" width="auto" enabled="true" visible="true" iconDensityAware="false"/>
+                </tnt:content>
+            </tnt:ToolHeader>
+        </tnt:header>
+        <tnt:sideContent>
+            <tnt:SideNavigation visible="true">
+                <tnt:item>
+                    <tnt:NavigationList width="auto" expanded="true">
+                        <tnt:items>
+                            <tnt:NavigationListItem icon="sap-icon://capital-projects" expanded="true" hasExpander="true" text="Project Master" select="_onNavigationListItemSelect">
+                                <tnt:items>
+                                    <tnt:NavigationListItem icon="sap-icon://building" expanded="false" hasExpander="true" text="Project">
+                                        <!--<tnt:items>-->
+                                        <!--    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Text"/>-->
+                                        <!--    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Text"/>-->
+                                        <!--</tnt:items>-->
+                                    </tnt:NavigationListItem>
+                                    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Amenities" select="_onNavigationListItemAmenities"/>
+                                    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Accessibility" select="_onNavigationListItemAccessibility"/>
+                                    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Consultant" select="_onNavigationListItemConsultant"/>
+                                </tnt:items>
+                            </tnt:NavigationListItem>
+                            <tnt:NavigationListItem icon="sap-icon://building" expanded="true" hasExpander="true" text="Unit" select="_onNavigationListItemSelect1">
+                                <tnt:items>
+                                    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Genearte Unit" select="_onNavigationListItemFirstLevelSelect3"/>
+                                    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Unit List" select="_onNavigationListItemFirstLevelSelect4"/>
+                                </tnt:items>
+                            </tnt:NavigationListItem>
+                            <tnt:NavigationListItem icon="sap-icon://vehicle-repair" expanded="true" hasExpander="true" text="Parking Slot">
+                                <tnt:items>
+                                    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Tentative Car Park" select="_onNavigationListItemFirstLevelSelect5"/>
+                                    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Car Park Numbering" select="_onNavigationListItemFirstLevelSelect6"/>
+                                    <tnt:NavigationListItem expanded="true" hasExpander="true" text="Allotment"/>
+                                </tnt:items>
+                            </tnt:NavigationListItem>
+                        </tnt:items>
+                    </tnt:NavigationList>
+                </tnt:item>
+                <tnt:fixedItem/>
+                <tnt:footer/>
+            </tnt:SideNavigation>
+        </tnt:sideContent>
+        <tnt:mainContents>
+        	 <layout:VerticalLayout id="ui">
+        	 		<core:Fragment id="frgPM" fragmentName="zarattzAratt_SD.view.fragments.ProjectMaster" type="XML" />
+        	<!--<core:Fragment id ="fAm" fragmentName ="zarattzAratt_SD.view.fragments.Amenities" type="XML"/>-->
+        	 </layout:VerticalLayout>
+                              
+        
+            </tnt:mainContents>
+    </tnt:ToolPage>
+    
+</mvc:View>
